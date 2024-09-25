@@ -1,5 +1,23 @@
-# Treebank format converter
-Version 1.1
+# UDConverter - Treebank format converter
+
+![Version](https://img.shields.io/badge/Version-1.1|22.01-darkviolet)
+![Python](https://img.shields.io/badge/python-3.9-blue?logo=python&logoColor=white)
+![Python](https://img.shields.io/badge/python-3.10-blue?logo=python&logoColor=white)
+![CI Status](https://img.shields.io/badge/CI-[unavailable]-red)
+![Docker](https://img.shields.io/badge/Docker-[unavailable]-red)
+
+UDConverter is a tool for converting constituency treebanks in the format of PPCHE (Penn Parsed Corpora of Historical English) to dependency treebanks following the Universal Dependencies framework. The tool is specifically configured to convert treebanks in the IcePaHC format.
+
+## Overview
+- **Language:** Python
+- **Language Version/Dialect:**
+  - Python: 3.9, 3.10
+- **Category:** [Support Tools](https://github.com/icelandic-lt/icelandic-lt/blob/main/doc/st.md)]
+- **Domain:** Generic
+- **Status:** Stable
+- **Origins:** [UDConverter 22.01](http://hdl.handle.net/20.500.12537/169) and [Github](https://github.com/thorunna/UDConverter).
+
+## Description
 
 A Python module for converting bracket-parsed [PPCHE-format](https://www.ling.upenn.edu/hist-corpora/) treebanks to the [Universal Dependencies](https://universaldependencies.org/) framework. It is heavily based on existing [NLTK](https://www.nltk.org/) packages.
 
@@ -9,11 +27,14 @@ The converter has been used to create two Icelandic UD treebanks: [UD_Icelandic-
 
 Version 1.1 has an 82.87 LAS.
 
-## Setup
+## Installation
 
 Install all requirements by running: 
 
-`pip install -r requirements.txt`
+``` shell
+python3 -m venv .venv && . .venv/bin/activate # optionally create and activate a virtual environment
+pip install -r requirements.txt
+```
 
 ## Usage
 
@@ -41,6 +62,21 @@ _Additionally included is a script to only convert the IcePaHC corpus (_ `icepah
 
 > `convert_icepahc.py`
 
+## License
+
+Copyright 2022 The Árni Magnússon Institue for Icelandic Studies
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
 
 ## Acknowledgements
 This converter is part of the UniTree project for IcePaHC, funded by The Strategic Research and Development Programme for Language Technology, grant no. 180020-5301. Thanks are due to Örvar Kárason, whose previous work was used as a basis for the conversion.
