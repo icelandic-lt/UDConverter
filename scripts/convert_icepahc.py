@@ -15,7 +15,7 @@ import requests
 import subprocess
 from sys import stdin, stdout
 
-import nltk >= 3.4.5
+import nltk
 from nltk.corpus.util import LazyCorpusLoader
 from nltk.data import path
 
@@ -46,8 +46,8 @@ def run_post_file(file_path):
 
 def main():
 
-    IcePaHC_DIR = '../psd/corpora/icepahc-v0.9/psd'
-    FIXED_IcePaHC_DIR = '../psd/corpora/icepahc-v0.9/psd_fix'
+    IcePaHC_DIR = '../corpora/icepahc-v0.9/psd'
+    FIXED_IcePaHC_DIR = '../corpora/icepahc-v0.9/psd_fix'
 
     fix_annotation_errors(IcePaHC_DIR, FIXED_IcePaHC_DIR)
 
